@@ -53,13 +53,17 @@ public class TelematicsService {
         }
     }
     //Updates html page with new vehicle information upon refreshing page
-    public static void updateDashboard(String filename, String target, String replacement, String toFileName) throws IOException {
-        static final String FILE_NAME = "dashboard.html";
+    public static void updateDashboard(VehicleInfo newVehicle) throws IOException {
+        List<String> lines = new ArrayList<>();
+        final String FILE_NAME = "dashboard.html";
         File file = new File(FILE_NAME);
         Scanner scanner = new Scanner(file);
         while (scanner.hasNext()){
-            
+            lines.add(scanner.nextLine());
         }
+        System.out.println(lines);
+        String odometer = String.format("%f",newVehicle.getOdometer());
+        System.out.println(odometer);
 
 //        Path path = Paths.get(filename);
 //        Path toPath = Paths.get(filename);

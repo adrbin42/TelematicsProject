@@ -42,6 +42,10 @@ public class Main {
             e.printStackTrace();
         }
 
-
+        try {
+            TelematicsService.updateDashboard();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
