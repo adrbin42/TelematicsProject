@@ -1,11 +1,15 @@
 package com.lionssharewebdev;
 
+import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-//import java.util.Scanner;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonGenerationException;
@@ -49,7 +53,27 @@ public class TelematicsService {
         }
     }
     //Updates html page with new vehicle information upon refreshing page
-    public static void updateDashboard(){
+    public static void updateDashboard(String filename, String target, String replacement, String toFileName) throws IOException {
+        static final String FILE_NAME = "dashboard.html";
+        File file = new File(FILE_NAME);
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNext()){
+            
+        }
 
+//        Path path = Paths.get(filename);
+//        Path toPath = Paths.get(filename);
+//        Charset charset = Charset.forName("UTF-8");
+//        BufferedWriter writer = Files.newBufferedWriter(toPath, charset);
+//        Scanner scanner = new Scanner(path, charset.name());
+//        String line;
+//        while(scanner.hasNextLine()){
+//            line = scanner.nextLine();
+//            line = line.replaceAll(target, replacement);
+//            writer.write(line);
+//            writer.newLine();
+//        }
+//        scanner.close();
+//        writer.close();
     }
 }
