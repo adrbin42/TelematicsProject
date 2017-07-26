@@ -62,7 +62,7 @@ public class TelematicsService {
             lines.add(scanner.nextLine());
         }
         System.out.println(lines);
-        String odometer = String.format("%f",newVehicle.getOdometer());
+        String odometer = String.valueOf(newVehicle.getOdometer());
         System.out.println(odometer);
 
 //        Path path = Paths.get(filename);
